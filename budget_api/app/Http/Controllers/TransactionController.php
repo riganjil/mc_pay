@@ -43,15 +43,6 @@ class TransactionController extends Controller
 
     public function store(Request $request)
     {
-//        $validator = Validator::make($request->all(), [
-//            'type' => 'required|in:income,expense'
-//        ]);
-//
-//        if ($validator->fails()) {
-//            $data = $validator->errors();
-//            return $this->show_error("error", 400);
-//        }
-
         $check = Category::where('id', $request->category_id)->first();
         $balance = User::where('id', $request->user_id)->first()->balance;
         $nominal = $request->nominal;
