@@ -34,4 +34,28 @@ class CategoryController extends Controller
             return redirect()->back();
         }
     }
+
+    public function edit($id)
+    {
+        $response = $this->client->get($this->api_service."/api/v1/category/$id");
+        $data = json_decode($response->getBody())->data;
+        return view('pages.category.edit', with(['data' => $data]));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = [
+            "name" => $request->name,
+            "type" => $request->type,
+        ];
+        try {
+            $response = $this->client->post($this->api_service."/api/v1/category/$id", [
+                'form_params' => $data
+            ]);
+            $res = json_decode($response->getBody());
+            return redirect('/category');
+        } catch (\Exception $exception) {
+            return redirect()->back();
+        }
+    }
 }

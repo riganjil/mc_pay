@@ -20,6 +20,7 @@
                                 <tr>
                                     <th>Name</th>
                                     <th>Email</th>
+                                    <th>Balance</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
@@ -27,6 +28,7 @@
                                 <tr>
                                     <th>Name</th>
                                     <th>Email</th>
+                                    <th>Balance</th>
                                     <th>Actions</th>
                                 </tr>
                                 </tfoot>
@@ -35,8 +37,9 @@
                                 <tr>
                                     <td>{{$value->name}}</td>
                                     <td>{{$value->email}}</td>
+                                    <td>Rp. {{number_format($value->balance)}}</td>
                                     <td>
-                                        <a href="" class="btn btn-sm btn-warning">edit</a>
+                                        <a href="{{url("user", $value->id)}}" class="btn btn-sm btn-warning">edit</a>
                                     </td>
                                 </tr>
                                 @endforeach

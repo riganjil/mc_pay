@@ -22,7 +22,6 @@
                                     <th>Type</th>
                                     <th>Nominal</th>
                                     <th>Description</th>
-                                    <th>Actions</th>
                                 </tr>
                                 </thead>
                                 <tfoot>
@@ -31,7 +30,6 @@
                                     <th>Type</th>
                                     <th>Nominal</th>
                                     <th>Description</th>
-                                    <th>Actions</th>
                                 </tr>
                                 </tfoot>
                                 <tbody>
@@ -41,9 +39,6 @@
                                     <td>{{$value->type}}</td>
                                     <td>Rp. {{number_format($value->nominal)}}</td>
                                     <td>{{$value->description}}</td>
-                                    <td>
-                                        <a href="" class="btn btn-sm btn-warning">edit</a>
-                                    </td>
                                 </tr>
                                 @endforeach
                             </table>

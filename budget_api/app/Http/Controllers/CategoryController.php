@@ -8,9 +8,17 @@ use Illuminate\Support\Facades\Validator;
 
 class CategoryController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $data = Category::get();
+        $type = $request->get('type');
+        if ($type == "income"){
+            $data = Category::where("type", "income")->get();
+        }else if ($type == "expense"){
+            $data = Category::where("type", "expense")->get();
+        }else{
+            $data = Category::get();
+        }
+
         $this->data = $data;
         return $this->show_success("success");
     }

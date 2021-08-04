@@ -36,7 +36,7 @@
                                     <td>{{$row->name}}</td>
                                     <td>{{$row->type}}</td>
                                     <td>
-                                        <a href="" class="btn btn-sm btn-warning">edit</a>
+                                        <a href="{{url("category", $row->id)}}" class="btn btn-sm btn-warning">edit</a>
                                     </td>
                                 </tr>
                                 @endforeach

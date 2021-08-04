@@ -30,8 +30,10 @@ $router->group(['prefix' => "api/v1"], function() use ($router){
 
     $router->get('transaction', 'TransactionController@index');
     $router->post('transaction', 'TransactionController@store');
+    $router->get('transaction/total', 'TransactionController@total');
     // user
     $router->get('user', 'UserController@index');
     $router->get('user/{id}', 'UserController@edit');
     $router->post('user', 'UserController@store');
+    $router->post('user/{id}', 'UserController@update');
 });

@@ -15,7 +15,7 @@ class user_seed extends Seeder
             'name' => 'Ari Maulana',
             'email' => 'ari@gmail.com',
             'password' => \Illuminate\Support\Facades\Hash::make('123'),
-            'balance' => '1000000'
+            'balance' => '2975000'
         ]);
     }
 }

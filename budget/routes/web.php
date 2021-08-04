@@ -20,9 +20,7 @@ Route::get('/logout', 'AuthController@logout');
 
 Route::group(['middleware' => 'auth_user'], function (){
 
-    Route::get('/', function () {
-        return view('welcome');
-    });
+    Route::get('/', 'HomeController@index');
 
 
     // category
@@ -51,4 +49,5 @@ Route::group(['middleware' => 'auth_user'], function (){
     Route::post('/user/{id}', 'UserController@update');
     // transaction
     Route::get('/transaction', 'TransactionController@index');
+    Route::get('/profile', 'UserController@profile');
 });

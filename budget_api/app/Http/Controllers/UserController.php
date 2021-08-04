@@ -34,4 +34,14 @@ class UserController extends Controller
         $insert = User::insert($data);
         return $this->show_success("success");
     }
+
+    public function update(Request $request)
+    {
+        $data = [
+            "name" => $request->name,
+            "email" => $request->email,
+        ];
+        $insert = User::where('id', $request->id)->update($data);
+        return $this->show_success("success");
+    }
 }

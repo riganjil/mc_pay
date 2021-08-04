@@ -13,5 +13,6 @@ class DatabaseSeeder extends Seeder
     {
          $this->call('user_seed');
          $this->call('category_seed');
+         $this->call('income_seed');
     }
 }

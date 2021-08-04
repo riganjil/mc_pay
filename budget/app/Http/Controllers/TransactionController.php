@@ -8,7 +8,8 @@ class TransactionController extends Controller
 {
     public function index()
     {
-        $response = $this->client->get($this->api_service."/api/v1/transaction");
+        $user_id = get_user()->id;
+        $response = $this->client->get($this->api_service."/api/v1/transaction?user_id=$user_id");
         $data = json_decode($response->getBody())->data;
         return view('pages.transaction.list', with(['data' => $data]));
     }

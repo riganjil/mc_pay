@@ -20,8 +20,8 @@
                                     <th>Name</th>
                                     <th>Type</th>
                                     <th>Nominal</th>
+                                    <th>Old Balance</th>
                                     <th>Description</th>
-                                    <th>Actions</th>
                                 </tr>
                                 </thead>
                                 <tfoot>
@@ -29,8 +29,8 @@
                                     <th>Name</th>
                                     <th>Type</th>
                                     <th>Nominal</th>
+                                    <th>Old Balance</th>
                                     <th>Description</th>
-                                    <th>Actions</th>
                                 </tr>
                                 </tfoot>
                                 <tbody>
@@ -39,10 +39,8 @@
                                         <td>{{$value->name}}</td>
                                         <td>{{$value->type}}</td>
                                         <td>Rp. {{number_format($value->nominal)}}</td>
+                                        <td>Rp. {{number_format($value->old_balance)}}</td>
                                         <td>{{$value->description}}</td>
-                                        <td>
-                                            <a href="" class="btn btn-sm btn-warning">edit</a>
-                                        </td>
                                     </tr>
                                 @endforeach
                             </table>
