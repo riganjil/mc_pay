@@ -7,6 +7,8 @@ folder name : budget
 - composer install
 - copy env : cp .env.example .env
 - add to env : API_SERVICE=http://localhost:8001/
+- php artisan key:generate
+- composer dumpautoload
 - run application : php artisan serve
 ### demo account 
 - username : test@gmail.com 
@@ -19,4 +21,5 @@ folder name : budget_api
 - copy env : cp .env.example .env
 - create database for api, example: mc_pay
 - change database configuration on env
+- php artisan migrate:fresh --seed
 - run application : php -S localhost:8001 -t ./public
