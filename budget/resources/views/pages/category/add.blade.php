@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('home')
+@section('active_category')
     active
 @endsection
 @section('body')

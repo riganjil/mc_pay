@@ -13,7 +13,7 @@ class user_seed extends Seeder
     {
         DB::table('users')->insert([
             'name' => 'Ari Maulana',
-            'email' => 'ari@gmail.com',
+            'email' => 'test@gmail.com',
             'password' => \Illuminate\Support\Facades\Hash::make('123'),
             'balance' => '2975000'
         ]);

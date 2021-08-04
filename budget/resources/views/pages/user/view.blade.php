@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('home')
+@section('active_view')
     active
 @endsection
 @section('body')
